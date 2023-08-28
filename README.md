@@ -26,6 +26,7 @@ Neste repositório, você encontrará informações sobre uma variedade de tópi
 O repositório está organizado da seguinte forma:
 
 - **/fundamentals:** Contém informações sobre os conceitos fundamentais do JavaScript.
+- **/exercise:** Contém exercício de javascript.
 - **/dom:** Aborda a manipulação do DOM e interação com páginas web.
 - **/assincrono:** Explora o JavaScript assíncrono e as Promises.
 - **/es6:** Destaca as características mais recentes do ECMAScript.
