@@ -1,0 +1,8 @@
+.titulo {
+    color: red;
+    transition: transform 1s;
+}
+
+.texto {
+    transition: transform 1s;
+}
