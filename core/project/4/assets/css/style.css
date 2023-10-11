@@ -60,3 +60,9 @@ form button:hover {
     width: 50%;
     float: right;
 }
+
+.resultado {
+    background-color: var(--primary-color);
+    color: #fff;
+    
+}
