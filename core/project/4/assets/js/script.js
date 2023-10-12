@@ -12,16 +12,16 @@ function form() {
         if (imc < 18.5){
             status_imc = 'Abaixo do peso'
         }
-        else if ((imc > 18.5) && (imc <= 24.0)){
+        else if ((imc >= 18.5) && (imc < 25)){
             status_imc = 'Peso normal'
         }
-        else if ((imc >= 25) && (imc <= 29.9)){
+        else if ((imc >= 25) && (imc < 30)){
             status_imc = 'Sobrepeso'
         }
-        else if ((imc >= 30) && (imc <= 34.9)){
+        else if ((imc >= 30) && (imc < 35)){
             status_imc = 'Obesidade grau 1'
         }
-        else if ((imc >= 35) && (imc <= 39.9)){
+        else if ((imc >= 35) && (imc < 40)){
             status_imc = 'Obesidade grau 2'
         }
         else if (imc > 40){
