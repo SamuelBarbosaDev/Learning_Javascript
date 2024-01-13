@@ -1,0 +1,79 @@
+/* FONTS */
+:root{
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+/* Colors */
+:root{
+    --color-white: #f0d9b5;
+    --color-black: #b58863;
+
+}
+
+:root{
+    --theme-piece-set-wp: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/wp.png');
+    --theme-piece-set-wn: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/wn.png');
+    --theme-piece-set-wr: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/wr.png');
+    --theme-piece-set-wb: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/wb.png');
+    --theme-piece-set-wq: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/wq.png');
+    --theme-piece-set-wk: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/wk.png');
+    --theme-piece-set-bp: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/bp.png');
+    --theme-piece-set-bn: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/bn.png');
+    --theme-piece-set-bb: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/bb.png');
+    --theme-piece-set-br: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/br.png');
+    --theme-piece-set-bq: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/bq.png');
+    --theme-piece-set-bk: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/bk.png');
+}
+/* GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+
+}
+
+body{
+
+}
+
+/* MAIN */
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: antiquewhite;
+}
+
+#chessboard{
+    display: grid;
+    grid-template-rows: repeat(8, 10rem);
+    grid-template-columns: repeat(8, 10rem);
+    height: 80rem;
+    width: 80rem;
+    background-color: darkgreen;
+}
+
+.square{
+    border: 0.01rem solid black;
+    min-width: 10rem;
+    min-height: 10rem;
+}
+
+.square:nth-child(56){
+    content: var(--theme-piece-set-wp);
+    height: 10%;
+    width: 10%;
+}
+
+.white{
+    background-color: var(--color-white);
+}
+
+.black{
+    background-color: var(--color-black);
+}
