@@ -1,0 +1,1 @@
+El hombre és una buana persona.
