@@ -32,6 +32,7 @@ O repositório está organizado da seguinte forma:
 - **/es6:** Destaca as características mais recentes do ECMAScript.
 - **/projects:** Aqui você encontrará projetos práticos para aplicar o que foi aprendido.
 
+
 ## Como Contribuir
 
 Sua contribuição é bem-vinda! Se você encontrar erros, tiver sugestões de melhorias ou quiser adicionar informações adicionais a este repositório, siga estas etapas:
