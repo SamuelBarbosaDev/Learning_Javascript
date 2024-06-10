@@ -49,6 +49,7 @@ Além deste repositório, aqui estão alguns recursos adicionais que podem ajuda
 - [Mozilla Developer Network (MDN) - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): Uma excelente fonte de informações sobre JavaScript.
 - [Codecademy - JavaScript Course](https://www.codecademy.com/learn/introduction-to-javascript): Um curso interativo para iniciantes em JavaScript.
 - [JavaScript.info](https://javascript.info/): Um tutorial abrangente sobre JavaScript.
+- [Map()](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ## Licença
 
