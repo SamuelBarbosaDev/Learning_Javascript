@@ -10,14 +10,19 @@ class CPF {
     }
 
     validadoCPF(){
-        let cpf = this.cpf.slice(0, 9);
+        if (this.cpf.length != 11){
+            console.log(`O CPF ${this.cpf} é invalido.`)
+        }
+        else {
+            let cpf = this.cpf.slice(0, 9);
 
-        for (let i=10; i<=11; i++){
-            cpf = cpf + this.calculadoDigito(cpf, i);
-        };
-
-        if (cpf === this.cpf) console.log(`O CPF ${this.cpf} é Válido.`);
-        else console.log(`O CPF ${this.cpf} é invalido.`);
+            for (let i=10; i<=11; i++){
+                cpf = cpf + this.calculadoDigito(cpf, i);
+            };
+    
+            if (cpf === this.cpf) console.log(`O CPF ${this.cpf} é Válido.`);
+            else console.log(`O CPF ${this.cpf} é invalido.`);
+        }
     }
 
     calculadoDigito(cpf, comprimentoDoCPF=10){
@@ -35,4 +40,4 @@ class CPF {
     }
 };
 
-const Vcpf = new CPF('111.222.333-96');
+const Vcpf = new CPF('111.222.3-96');
