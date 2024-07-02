@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto window no JavaScript</title>
+</head>
+<body>
+    <main>
+        <section class="main-content">
+            <h1>Objeto window no JavaScript</h1>
+            <p>O objeto <code>window</code> no JavaScript representa a janela do navegador e fornece acesso a várias funcionalidades relacionadas à janela, como manipulação do DOM, gerenciamento de sessões, controle de pop-ups e muito mais. Aqui estão alguns pontos importantes sobre o objeto <code>window</code>:</p>
+            <section class="container-image">
+                <img src="img/pic_htmltree.gif" alt="dom-structure">
+            </section>
+            <ul>
+                <li><strong>Propriedades Globais:</strong> O objeto <code>window</code> é global e está disponível em todo o escopo do navegador. Você pode acessar variáveis globais definidas no escopo global usando <code>window.variavel</code>.</li>
+                <li><strong>Manipulação do DOM:</strong> O <code>window</code> permite acessar o DOM (Document Object Model) e interagir com elementos HTML. Por exemplo, <code>window.document</code> representa o documento HTML atual.</li>
+                <li><strong>Métodos e Eventos:</strong> O <code>window</code> possui métodos e eventos para manipular a janela do navegador. Alguns exemplos incluem:
+                    <ul>
+                        <li><code>window.open(url, nome, opcoes)</code>: Abre uma nova janela ou guia com a URL especificada.</li>
+                        <li><code>window.close()</code>: Fecha a janela atual.</li>
+                        <li><code>window.addEventListener('load', função)</code>: Executa a função após o carregamento completo da página.</li>
+                    </ul>
+                </li>
+                <li><strong>Controle de Pop-ups:</strong> O <code>window</code> permite abrir e controlar pop-ups (janelas secundárias). Use <code>window.open()</code> para abrir uma nova janela.</li>
+                <li><strong>Armazenamento Local:</strong> O <code>window.localStorage</code> e <code>window.sessionStorage</code> permitem armazenar dados localmente no navegador. <code>localStorage</code> persiste entre sessões, enquanto <code>sessionStorage</code> é temporário.</li>
+                <li><strong>Temporizadores:</strong> O <code>window.setTimeout(função, tempo)</code> e <code>window.setInterval(função, intervalo)</code> permitem agendar a execução de funções após um determinado tempo ou em intervalos regulares.</li>
+                <li><strong>Informações da Janela:</strong>
+                    <ul>
+                        <li><code>window.innerWidth</code> e <code>window.innerHeight</code> fornecem as dimensões da janela do navegador.</li>
+                        <li><code>window.location</code> contém informações sobre a URL atual.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Lembre-se de que o objeto <code>window</code> é apenas uma parte do ambiente de execução do JavaScript no navegador.</p>
+            <section class="buttons-nav">
+                <button onclick="abrirW3Scholl()">W3schools</button>
+                <button onclick="abrirDeveloperMozilla()">Developer Mozilla</button>
+            </section>
+        </section>
+    </main>
+</body>
+
+<script>
+    function abrirW3Scholl(){
+        if (confirm('Gostaria de ir até o w3schools para aprender sobre DOM?')){
+            window.open('https://www.w3schools.com/js/js_htmldom.asp')
+        }
+    }
+    function abrirDeveloperMozilla(){
+        if (confirm('Gostaria de ir até o developer mozilla para aprender sobre DOM?')){
+            location.href = 'https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction'
+        }
+    }
+</script>
+
+<style>
+    /* Fonts */
+    :root{
+        font-family: sans-serif;
+        font-size: 62.5%;
+    }
+
+    /* Colors */
+    :root{
+        --color-default: #fff;
+        --color-primary: rgb(17, 86, 102);
+        --color-secondary: rgba(17, 86, 102, .5);
+    }
+
+    /* Gaps */
+    :root{
+        --gap-default: 5rem;
+        --gap-small:1.5rem;
+    }
+
+    /* Global */
+    *{
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    html{
+        scroll-behavior: var(--color-primary);
+    }
+
+    body{
+        background-color: var(--color-primary);
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    li{
+        margin-top: 1rem;
+    }
+
+    code{
+        font-weight: bolder;
+    }
+
+    /* MAIN */
+    main{
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .main-content{
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: var(--gap-default);
+        min-height: 80rem;
+        width: 60rem;
+        border-radius: 1.5rem;
+        background-color: var(--color-default);
+    }
+
+    .main-content > h1{
+        text-align: center;
+        margin-bottom: var(--gap-small);
+    }
+
+    /* List */
+    .main-content > ul{
+        margin-top: 1rem;
+        padding: 1.7rem;
+    }
+    
+    li > ul{
+        padding: 2.5rem;
+    }
+
+    /* image */
+    .container-image{
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Buttons */
+    .buttons-nav{
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .buttons-nav > button{
+        height: 6rem;
+        width: 12rem;
+        padding: 1rem;
+        margin-right: 2rem;
+    }
+</style>
+</html>
