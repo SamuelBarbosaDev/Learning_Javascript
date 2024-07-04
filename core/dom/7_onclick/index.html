@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução aos Eventos</title>
+</head>
+<body>
+    <main>
+        <section class="main-content">
+            <section class="header-title">
+                <h1>Introdução aos Eventos</h1>
+                <span>Alterando a cor da tag <strong>H1</strong>.</span>
+            </section>
+            <section class="buttons-nav">
+                <button onclick="verde()">Verde</button>
+                <button onclick="vermelho()">Vermelho</button>
+            </section>
+        </section>
+    </main>
+</body>
+<script>
+    const tagH1 = document.getElementsByTagName('h1');
+
+    function verde(){
+        tagH1[0].style.color = 'green'
+    }
+
+    function vermelho(){
+        tagH1[0].style.color = 'red'
+    }
+</script>
+<style>
+    /* Fonts */
+    :root{
+        font-family: sans-serif;
+        font-size: 62.5%;
+    }
+
+    /* Colors */
+    :root{
+        --color-default: #fff;
+        --color-primary: rgb(17, 86, 102);
+        --color-secondary: rgba(17, 86, 102, .5);
+    }
+
+    /* Gaps */
+    :root{
+        --gap-default: 5rem;
+        --gap-small:1.5rem;
+    }
+
+    /* Global */
+    *{
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    html{
+        scroll-behavior: var(--color-primary);
+    }
+
+    body{
+        background-color: var(--color-primary);
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    li{
+        margin-top: 1rem;
+    }
+
+    code{
+        font-weight: bolder;
+    }
+
+    /* MAIN */
+    main{
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .main-content{
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: var(--gap-default);
+        min-height: 80rem;
+        width: 60rem;
+        border-radius: 1.5rem;
+        background-color: var(--color-default);
+    }
+
+    .main-content > h1{
+        text-align: center;
+        margin-bottom: var(--gap-small);
+    }
+
+    /* List */
+    .main-content > ul{
+        margin-top: 1rem;
+        padding: 1.7rem;
+    }
+    
+    li > ul{
+        padding: 2.5rem;
+    }
+
+    /* image */
+    .container-image{
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Buttons */
+    .buttons-nav{
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .buttons-nav > button{
+        height: 6rem;
+        width: 12rem;
+        padding: 1rem;
+        margin-right: 2rem;
+    }
+    /* SUBTITLE */
+    .header-title{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .subtitle{
+        opacity: 0.5;
+        text-align: center;
+        width: 100%;
+    }
+
+
+</style>
+</html>
