@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Elementos</title>
+</head>
+
+<body>
+    <main>
+        <section class="main-content">
+            <section class="header-title">
+                <h1>Add Elementos - Parte 2</h1>
+                <span>Adicionando elementos em varias posições em relação a tag <strong>DIV</strong>.</span>
+            </section>
+            <div id="container-div">
+                Dentro da Div
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    const tagDiv = document.getElementsByTagName('div')
+
+    function addElemento(){        
+        const elementoP = document.createElement('p')
+        elementoP.className = "alert"
+        elementoP.innerText = "Adicionado elemento"
+
+        return elementoP
+    }
+
+    // Adicionando HTML antes da Div
+    tagDiv[0].insertAdjacentElement('beforebegin', addElemento())
+
+    // Adicionando HTML ao início da DIV
+    tagDiv[0].insertAdjacentElement('afterbegin', addElemento())
+
+    // // Adicionando HTML ao fim da DIV
+    tagDiv[0].insertAdjacentElement('beforeend', addElemento())
+
+    // // Adicionando HTML depois da DIV
+    tagDiv[0].insertAdjacentElement('afterend', addElemento())
+
+</script>
+<style>
+    /* Fonts */
+    :root {
+        font-family: sans-serif;
+        font-size: 62.5%;
+    }
+
+    /* Colors */
+    :root {
+        --color-default: #fff;
+        --color-primary: rgb(17, 86, 102);
+        --color-secondary: rgba(17, 86, 102, .5);
+    }
+
+    /* Gaps */
+    :root {
+        --gap-default: 5rem;
+        --gap-small: 1.5rem;
+    }
+
+    /* Global */
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    html {
+        scroll-behavior: var(--color-primary);
+    }
+
+    body {
+        background-color: var(--color-primary);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    li {
+        margin-top: 1rem;
+    }
+
+    code {
+        font-weight: bolder;
+    }
+
+    /* MAIN */
+    main {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .main-content {
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: var(--gap-default);
+        min-height: 80rem;
+        width: 60rem;
+        border-radius: 1.5rem;
+        background-color: var(--color-default);
+    }
+
+    .main-content>h1 {
+        text-align: center;
+        margin-bottom: var(--gap-small);
+    }
+
+    /* List */
+    .main-content>ul {
+        margin-top: 1rem;
+        padding: 1.7rem;
+    }
+
+    li>ul {
+        padding: 2.5rem;
+    }
+
+    /* image */
+    .container-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Buttons */
+    .buttons-nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .buttons-nav>button {
+        height: 6rem;
+        width: 12rem;
+        padding: 1rem;
+        margin-right: 2rem;
+    }
+
+    /* SUBTITLE */
+    .header-title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .subtitle {
+        opacity: 0.5;
+        text-align: center;
+        width: 100%;
+    }
+
+    .alert {
+        font-weight: bolder;
+        background-color: blueviolet;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    #container-div{
+        padding: 2rem;
+        margin: 2rem;
+        border: solid .6rem gray;
+    }
+</style>
+
+</html>
