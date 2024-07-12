@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrollTo & scrollBy</title>
+</head>
+<body>
+    <main>
+        <section class="main-content">
+            <h1>Estudo sobre scrollTo & scrollBy.</h1>
+            <p id="tagP">Movendo se pela página usando o <strong>scrollTo & scrollBy</strong></p>
+            <div id="container-div">
+                <label for="value-scroll">Deslocamento pela página:</label>
+                <input type="number" name="value-scroll" id="value-scroll-input">
+                <button onclick="deslocamentoScroll()">IR</button>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    const input = document.getElementById('value-scroll-input');
+
+    function deslocamentoScroll(){
+        window.scrollTo(0, input.value)
+        // window.scrollBy(0, input.value)
+    }
+
+</script>
+<style>
+    /* Fonts */
+    :root {
+        font-family: sans-serif;
+        font-size: 62.5%;
+    }
+
+    /* Colors */
+    :root {
+        --color-default: #fff;
+        --color-primary: rgb(17, 86, 102);
+        --color-secondary: rgba(17, 86, 102, .5);
+    }
+
+    /* Gaps */
+    :root {
+        --gap-default: 5rem;
+        --gap-small: 1.5rem;
+    }
+
+    /* Global */
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    html {
+        scroll-behavior: var(--color-primary);
+    }
+
+    body {
+        background-color: var(--color-primary);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    li {
+        margin-top: 1rem;
+    }
+
+    code {
+        font-weight: bolder;
+    }
+
+    /* MAIN */
+    main {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .main-content {
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: var(--gap-default);
+        min-height: 400vh;
+        width: 60rem;
+        border-radius: 1.5rem;
+        background-color: var(--color-default);
+    }
+
+    .main-content>h1 {
+        text-align: center;
+        margin-bottom: var(--gap-small);
+    }
+
+    /* image */
+    .container-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Buttons */
+    .buttons-nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .buttons-nav>button {
+        height: 6rem;
+        width: 12rem;
+        padding: 1rem;
+        margin-right: 2rem;
+    }
+
+    /* SUBTITLE */
+    .header-title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .subtitle {
+        opacity: 0.5;
+        text-align: center;
+        width: 100%;
+    }
+
+    .alert {
+        font-weight: bolder;
+        background-color: blueviolet;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    ol{
+        padding: 5rem;
+    }
+
+    p{
+        font-weight: bold;
+        background-color: yellow;
+        padding: 3rem;
+        color: red;
+    }
+
+    #container-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    label, input, button{
+        display: block;
+        margin-top: 2rem;
+    }
+
+    input, button{
+        height: 4rem;
+        min-width: 10rem;
+        text-align: center;
+    }
+
+</style>
+</html>
