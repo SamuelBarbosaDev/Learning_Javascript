@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse events</title>
+</head>
+<body>
+    <main>
+        <section class="main-container">
+            <h1>Mouse Events</h1>
+            <p class="alert">Interaja comigo (click aqui) & Aperte F12 e Abrar o console.</p>
+        </section>
+    </main>
+</body>
+
+<script>
+    document.getElementsByTagName('p')[0].addEventListener('click', () => console.log('click'))
+    document.getElementsByTagName('p')[0].addEventListener('mousemove', () => console.log('mouse move'))
+    document.getElementsByTagName('p')[0].addEventListener('mouseup', () => console.log('mouse up'))
+    document.getElementsByTagName('p')[0].addEventListener('mousedown', () => console.log('mouse down'))
+    document.getElementsByTagName('p')[0].addEventListener('mouseenter', () => console.log('mouse enter'))
+    document.getElementsByTagName('p')[0].addEventListener('mouseleave', () => console.log('mouse leave'))
+</script>
+<style>
+        /* Fonts */
+        :root {
+        font-family: sans-serif;
+        font-size: 62.5%;
+    }
+
+    /* Colors */
+    :root {
+        --color-default: #fff;
+        --color-primary: rgb(17, 86, 102);
+        --color-secondary: rgba(17, 86, 102, .5);
+    }
+
+    /* Gaps */
+    :root {
+        --gap-default: 5rem;
+        --gap-small: 1.5rem;
+    }
+
+    /* Global */
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    html {
+        scroll-behavior: var(--color-primary);
+    }
+
+    body {
+        background-color: var(--color-primary);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    li {
+        margin-top: 1rem;
+    }
+
+    code {
+        font-weight: bolder;
+    }
+
+    /* MAIN */
+    main {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .main-container {
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: var(--gap-default);
+        min-height: 80vh;
+        width: 60rem;
+        border-radius: 1.5rem;
+        background-color: var(--color-default);
+    }
+
+    .main-container>h1 {
+        text-align: center;
+        margin-bottom: var(--gap-small);
+    }
+
+    .content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* AULA */
+    .alert{
+        background-color: yellowgreen;
+        font-weight: bold;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+</html>
