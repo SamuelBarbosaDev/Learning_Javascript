@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+<body>
+    <main>
+        <section class="main-container">
+            <h1>Adicionando Eventos Com addEventListener</h1>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad delectus similique rerum perspiciatis reiciendis. Atque itaque esse distinctio id dignissimos repellat possimus qui, similique corporis ipsa beatae amet sequi provident!</p>
+                <button id="inicia-contagem">Inicia Contagem</button>
+                <button id="remove-contagem">Remove Contagem</button>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script>
+    let valor = 0;
+    document.getElementById('inicia-contagem').addEventListener('click', iniciaContagem)
+    // document.getElementById('remove-contagem').removeEventListener('click', iniciaContagem)
+
+    function iniciaContagem(){
+        let e = document.getElementsByTagName('p')[0]
+        valor++
+
+        e.textContent = valor
+    }
+</script>
+<style>
+    /* Fonts */
+    :root {
+        font-family: sans-serif;
+        font-size: 62.5%;
+    }
+
+    /* Colors */
+    :root {
+        --color-default: #fff;
+        --color-primary: rgb(17, 86, 102);
+        --color-secondary: rgba(17, 86, 102, .5);
+    }
+
+    /* Gaps */
+    :root {
+        --gap-default: 5rem;
+        --gap-small: 1.5rem;
+    }
+
+    /* Global */
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    html {
+        scroll-behavior: var(--color-primary);
+    }
+
+    body {
+        background-color: var(--color-primary);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    li {
+        margin-top: 1rem;
+    }
+
+    code {
+        font-weight: bolder;
+    }
+
+    /* MAIN */
+    main {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .main-container {
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: var(--gap-default);
+        min-height: 80vh;
+        width: 60rem;
+        border-radius: 1.5rem;
+        background-color: var(--color-default);
+    }
+
+    .main-container > h1 {
+        text-align: center;
+        margin-bottom: var(--gap-small);
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* AULA */
+    .alert{
+        background-color: yellowgreen;
+        font-weight: bold;
+    }
+
+    #alterar-texto{
+        background-color: blueviolet;
+    }
+</style>
+</html>
