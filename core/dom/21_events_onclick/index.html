@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - onclick</title>
+</head>
+<body>
+    <main>
+        <section class="main-content">
+            <h1>Estudo sobre eventos onclick</h1>
+            <p class="alert">Click aqui.</p>
+        </section>
+    </main>
+    
+</body>
+
+<script>
+    document.getElementsByTagName('p')[0].onclick = function(){
+        document.getElementsByTagName('p')[0].textContent = 'Alterando texto por meio do onclick.'
+    }
+</script>
+<style>
+        /* Fonts */
+        :root {
+        font-family: sans-serif;
+        font-size: 62.5%;
+    }
+
+    /* Colors */
+    :root {
+        --color-default: #fff;
+        --color-primary: rgb(17, 86, 102);
+        --color-secondary: rgba(17, 86, 102, .5);
+    }
+
+    /* Gaps */
+    :root {
+        --gap-default: 5rem;
+        --gap-small: 1.5rem;
+    }
+
+    /* Global */
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    html {
+        scroll-behavior: var(--color-primary);
+    }
+
+    body {
+        background-color: var(--color-primary);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    li {
+        margin-top: 1rem;
+    }
+
+    code {
+        font-weight: bolder;
+    }
+
+    /* MAIN */
+    main {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .main-content {
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: var(--gap-default);
+        min-height: 80vh;
+        width: 60rem;
+        border-radius: 1.5rem;
+        background-color: var(--color-default);
+    }
+
+    .main-content>h1 {
+        text-align: center;
+        margin-bottom: var(--gap-small);
+    }
+
+    /* AULA */
+    .alert{
+        background-color: yellowgreen;
+        padding: var(--gap-small);
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+</html>
