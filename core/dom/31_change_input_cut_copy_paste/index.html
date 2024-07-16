@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change input cut copy paste</title>
+</head>
+<body>
+    <main>
+        <section class="main-container">
+            <h1>Estudo sobre change, input, cut, copy e paste</h1>
+            <div class="content">
+                <form action="" name="form_login">
+                    <div>
+                        <label for="tarefa">Tarefa:</label>
+                        <input type="text" name="tarefa" id="tarefa">
+                    </div>
+                    <div>
+                        <select name="duracao" id="duracao">
+                            <option value="1">1 Dia</option>
+                            <option value="2">2 Dia</option>
+                            <option value="3">3 Dia</option>
+                        </select>
+                    </div>
+                </form>
+                <p class="alert">Altere algo.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script>
+    const tarefa = document.querySelector('[name="tarefa"]')
+    const duracao = document.querySelector('[name="duracao"]')
+
+    // tarefa.addEventListener('change', e => {
+    //     document.getElementsByTagName('p')[0].innerText = 'Alterando Input'
+    // })
+
+    duracao.addEventListener('change', e => {
+        document.getElementsByTagName('p')[0].innerText = 'Alterando Dias'
+    })
+
+    // tarefa.addEventListener('input', e => {
+    //     document.getElementsByTagName('p')[0].innerText = 'Escrevendo no input'
+    // })
+
+    tarefa.addEventListener('cut', e => {
+        document.getElementsByTagName('p')[0].innerText = 'Recortando'
+    })
+
+    tarefa.addEventListener('copy', e => {
+        document.getElementsByTagName('p')[0].innerText = 'Copiando'
+    })
+
+    tarefa.addEventListener('paste', e => {
+        document.getElementsByTagName('p')[0].innerText = 'Colando'
+    })
+</script>
+<style>
+    /* Fonts */
+    :root {
+        font-family: sans-serif;
+        font-size: 62.5%;
+    }
+
+    /* Colors */
+    :root {
+        --color-default: #fff;
+        --color-primary: rgb(17, 86, 102);
+        --color-secondary: rgba(17, 86, 102, .5);
+    }
+
+    /* Gaps */
+    :root {
+        --gap-default: 5rem;
+        --gap-small: 1.5rem;
+    }
+
+    /* Global */
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    html {
+        scroll-behavior: var(--color-primary);
+    }
+
+    body {
+        background-color: var(--color-primary);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    li {
+        margin-top: 1rem;
+    }
+
+    code {
+        font-weight: bolder;
+    }
+
+    /* MAIN */
+    main {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .main-container {
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: var(--gap-default);
+        min-height: 80vh;
+        width: 60rem;
+        border-radius: 1.5rem;
+        background-color: var(--color-default);
+    }
+
+    .main-container>h1 {
+        text-align: center;
+        margin-bottom: var(--gap-small);
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* AULA */
+    .alert{
+        background-color: yellowgreen;
+        font-weight: bold;
+        padding: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    #caixa-de-texto{
+        padding: 2rem;
+        margin-bottom: 2rem;
+        width: 80%;
+        text-align: center;
+    }
+
+    .focus{
+        background-color: red;
+    }
+</style>
+</html>
