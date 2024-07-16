@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit</title>
+</head>
+<body>
+    <main>
+        <section class="main-container">
+            <h1>Estudo sobre submit</h1>
+            <div class="content">
+                <form action="#" method="post" name="form_login">
+                    <div>
+                        <label for="user">Usuário:</label>
+                        <input type="text" name="user" id="user" autofocus>
+                    </div>
+                    <div>
+                        <label for="password">Senha:</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script>
+    const tagForm = document.getElementsByName('form_login')[0]
+    console.log(tagForm)
+
+
+    tagForm.addEventListener('submit', e => {
+        console.log('Hello World!!!')
+        e.preventDefault()
+    })
+</script>
+<style>
+    /* Fonts */
+    :root {
+        font-family: sans-serif;
+        font-size: 62.5%;
+    }
+
+    /* Colors */
+    :root {
+        --color-default: #fff;
+        --color-primary: rgb(17, 86, 102);
+        --color-secondary: rgba(17, 86, 102, .5);
+    }
+
+    /* Gaps */
+    :root {
+        --gap-default: 5rem;
+        --gap-small: 1.5rem;
+    }
+
+    /* Global */
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    html {
+        scroll-behavior: var(--color-primary);
+    }
+
+    body {
+        background-color: var(--color-primary);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    li {
+        margin-top: 1rem;
+    }
+
+    code {
+        font-weight: bolder;
+    }
+
+    /* MAIN */
+    main {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .main-container {
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: var(--gap-default);
+        min-height: 80vh;
+        width: 60rem;
+        border-radius: 1.5rem;
+        background-color: var(--color-default);
+    }
+
+    .main-container>h1 {
+        text-align: center;
+        margin-bottom: var(--gap-small);
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* AULA */
+    .alert{
+        background-color: yellowgreen;
+        font-weight: bold;
+        padding: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    #caixa-de-texto{
+        padding: 2rem;
+        margin-bottom: 2rem;
+        width: 80%;
+        text-align: center;
+    }
+
+    .focus{
+        background-color: red;
+    }
+</style>
+</html>
