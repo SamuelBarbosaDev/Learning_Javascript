@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event.key</title>
+</head>
+<body>
+    <main>
+        <section class="main-container">
+            <h1>Estudo sobre os eventos dos botões, Mouse e teclado</h1>
+            <div class="content">
+                <p class="alert">Interaja comigo (click aqui) & Aperte F12 e Abrar o console.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script>
+    document.getElementsByTagName('p')[0].addEventListener('mousemove', () => {
+        console.log(event.button)
+
+        if(event.shiftKey) console.log('Shift')
+        if(event.altKey) console.log('Alt')
+        if(event.ctrlKey) console.log('Ctrl')
+        if(event.ctrlKey && event.shiftKey) console.log('Ctrl + Shift')
+
+    })
+</script>
+<style>
+    /* Fonts */
+    :root {
+        font-family: sans-serif;
+        font-size: 62.5%;
+    }
+
+    /* Colors */
+    :root {
+        --color-default: #fff;
+        --color-primary: rgb(17, 86, 102);
+        --color-secondary: rgba(17, 86, 102, .5);
+    }
+
+    /* Gaps */
+    :root {
+        --gap-default: 5rem;
+        --gap-small: 1.5rem;
+    }
+
+    /* Global */
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    html {
+        scroll-behavior: var(--color-primary);
+    }
+
+    body {
+        background-color: var(--color-primary);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    li {
+        margin-top: 1rem;
+    }
+
+    code {
+        font-weight: bolder;
+    }
+
+    /* MAIN */
+    main {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .main-container {
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: var(--gap-default);
+        min-height: 80vh;
+        width: 60rem;
+        border-radius: 1.5rem;
+        background-color: var(--color-default);
+    }
+
+    .main-container>h1 {
+        text-align: center;
+        margin-bottom: var(--gap-small);
+    }
+
+    .content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* AULA */
+    .alert{
+        background-color: yellowgreen;
+        font-weight: bold;
+        padding: 2rem;
+    }
+</style>
+</html>
