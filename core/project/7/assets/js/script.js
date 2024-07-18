@@ -84,9 +84,9 @@ tagForm.addEventListener('submit', e => {
     removeMensagensDeErro();
 
     if(
-        validaCamposEmBranco() || 
-        validaCampoCPF(cpf) || 
-        validaCampoUser(user) || 
+        validaCamposEmBranco() && 
+        validaCampoCPF(cpf) && 
+        validaCampoUser(user) && 
         validaCampoPassword(password, rePassword)
     ){
         alert('Formulário Enviado.')
