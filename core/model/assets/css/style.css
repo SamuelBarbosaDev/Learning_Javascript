@@ -39,14 +39,14 @@ h1{
 /* MAIN */
 main{
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
 }
 
 .main-content{
     margin: 0 auto;
     padding: var(--gap-default);
-    height: 80rem;
+    min-height: 80rem;
     width: 60rem;
     border-radius: 1.5rem;
     background-color: var(--color-default);
