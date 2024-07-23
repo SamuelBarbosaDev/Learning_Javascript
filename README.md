@@ -50,6 +50,8 @@ Além deste repositório, aqui estão alguns recursos adicionais que podem ajuda
 - [Codecademy - JavaScript Course](https://www.codecademy.com/learn/introduction-to-javascript): Um curso interativo para iniciantes em JavaScript.
 - [JavaScript.info](https://javascript.info/): Um tutorial abrangente sobre JavaScript.
 - [Map()](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map) Documentação do Map().
+- [Can I use](https://caniuse.com/): Verificar a compatibilidade de diferentes funcionalidades e tecnologias web (como HTML5, CSS3 e APIs JavaScript) em vários navegadores e suas versões.
+- [Babel](https://babeljs.io/): Permite que você escreva código JavaScript usando as últimas funcionalidades da linguagem (como ES6/ES7) e o converte para uma versão mais antiga e compatível com navegadores que ainda não suportam essas novas funcionalidades
 
 ## Licença
 
