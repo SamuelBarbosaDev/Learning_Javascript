@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"AAGAA,MAAM","sources":["webpack://50/./src/index.js"],"sourcesContent":["// 1\n// 2\n// 3\nalert('Webpack (Boilerplate) EIIIIIIIIIIIIIIIIIIIIIII');\n"],"names":["alert"],"sourceRoot":""}
