@@ -1,0 +1,2 @@
+(()=>{"use strict";alert("\n    Nome: ".concat("Carlinhos",",\n    Idade: ").concat(54,",\n    Idade X2: ").concat(108,",\n")),console.log("Eu sou o padrão. HeHeHeHeHeHeH 222")})();
+//# sourceMappingURL=bundle.js.map
