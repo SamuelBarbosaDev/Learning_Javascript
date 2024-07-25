@@ -53,6 +53,7 @@ Além deste repositório, aqui estão alguns recursos adicionais que podem ajuda
 - [Can I use](https://caniuse.com/): Verificar a compatibilidade de diferentes funcionalidades e tecnologias web (como HTML5, CSS3 e APIs JavaScript) em vários navegadores e suas versões.
 - [Babel](https://babeljs.io/): Permite que você escreva código JavaScript usando as últimas funcionalidades da linguagem (como ES6/ES7) e o converte para uma versão mais antiga e compatível com navegadores que ainda não suportam essas novas funcionalidades.
 - [Webpack](https://webpack.js.org/): uma ferramenta de empacotamento de módulos para JavaScript.
+- [Import/Export](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export): Explicação sobre o funcionamento do import e export no javascript.
 
 ## Licença
 
