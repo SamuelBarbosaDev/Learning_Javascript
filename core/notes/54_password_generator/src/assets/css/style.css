@@ -1,0 +1,87 @@
+/* Fonts */
+:root{
+    font-family: sans-serif;
+    font-size: 62.5%;
+}
+
+/* Colors */
+:root{
+    --color-default: #fff;
+    --color-primary: rgb(17, 86, 102);
+    --color-secondary: rgba(17, 86, 102, .5);
+}
+
+/* Gaps */
+:root{
+    --gap-default: 3rem;
+    --gap-small: 1.5rem;
+}
+
+/* Global */
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--color-primary);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+/* MAIN */
+main{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.main-content{
+    margin: 0 auto;
+    padding: var(--gap-default);
+    min-height: 80rem;
+    width: 60rem;
+    border-radius: 1.5rem;
+    background-color: var(--color-default);
+}
+
+.main-content > h1{
+    text-align: center;
+    margin-bottom: var(--gap-small);
+}
+
+/* Aula */
+
+.option-generator-password{
+    display: flex;
+    flex-direction: column;
+}
+
+.password{
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.option-generator-password > div{
+    margin-top: 1rem;
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    margin-top: 1rem;
+    height: 8rem;
+    width: 15rem;
+}
