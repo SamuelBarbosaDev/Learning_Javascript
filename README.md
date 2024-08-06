@@ -56,6 +56,8 @@ Além deste repositório, aqui estão alguns recursos adicionais que podem ajuda
 - [Import/Export](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export): Explicação sobre o funcionamento do import e export no javascript.
 - [CLI Commands](https://docs.npmjs.com/cli/v9/commands?v=true): Comandos do NPM.
 - [Node](https://nodejs.org/pt/learn/getting-started/introduction-to-nodejs): Documentação do node.
+- [Ejs](https://ejs.co/): O EJS é uma linguagem de modelo simples que permite
+ gerar marcação HTML com JavaScript simples.
 
 ## Licença
 
