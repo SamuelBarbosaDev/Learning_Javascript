@@ -1,0 +1,142 @@
+/* Fonts */
+:root{
+    font-family: sans-serif;
+    font-size: 62.5%;
+}
+
+/* Colors */
+:root{
+    --color-default: #fff;
+    --color-primary: rgb(17, 86, 102);
+    --color-secondary: rgba(17, 86, 102, .5);
+}
+
+/* Gaps */
+:root{
+    --gap-default: 3rem;
+    --gap-small: 1.5rem;
+}
+
+/* Global */
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--color-default);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-default);
+}
+
+a:hover{
+    opacity: 0.6;
+}
+
+/* MAIN */
+main{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.main-content{
+    margin: 0 auto;
+    padding: var(--gap-default);
+    min-height: 80rem;
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content > h1{
+    text-align: center;
+    margin-bottom: var(--gap-small);
+}
+
+/* HEADER */
+header{
+    background-color: var(--color-primary);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+#header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    width: 90%;
+    margin: 0 auto;
+    color: var(--color-default);
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#nav-pages > ul{
+    display: flex;
+
+}
+
+#nav-pages > ul > li{
+    margin-right: 2rem;
+}
+
+#nav-pages > ul > li > a{
+    font-size: 1.5rem;
+}
+
+/* AGENDA */
+.agenda-contacts {
+    width: 100%;
+    border-collapse: collapse;
+}
+tr {
+    height: 5rem;
+}
+tr td {
+    border-top: 0.2rem solid #ccc;
+    padding: 1rem;
+}
+
+/* NOTIFICAÇÕES */
+.alert, .done{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    margin: 1rem;
+    height: 5rem;
+    width: 100%;
+}
+.alert{
+    background-color: rgb(202, 142, 142);
+    color: rgb(85, 0, 0);
+}
+
+.done{
+    background-color: rgb(106, 186, 106);
+    color: rgb(0, 69, 0);
+}
