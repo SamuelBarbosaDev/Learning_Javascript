@@ -1,5 +1,6 @@
 exports.globalMiddlewares = (request, response, next) =>{
-    response.locals.umaVariavelLocal = 'Vou passou pelo Middlewares Global.';
+    response.locals.errors = request.flash('errors');
+    response.locals.success = request.flash('success');
     next();
 };
 
