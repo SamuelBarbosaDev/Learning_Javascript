@@ -4,8 +4,11 @@
         <nav id="nav-pages">
             <ul>
                 <li><a href="/">HOME</a></li>
-                <li><a href="/login">LOGIN</a></li>
-                <li><a href="#">AGENDAMENTOS</a></li>
+                <% if(user) { %>
+                    <li><a href="/login/logout" style="color: red;">LOGOUT</a></li>
+                <% } else { %>
+                    <li><a href="/login">LOGIN</a></li>
+                <% } %>
             </ul>
         </nav>
     </section>
