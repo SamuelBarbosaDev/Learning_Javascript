@@ -53,5 +53,5 @@ app.on(status, () => {
         () => {
             console.log('Acesse o site: http://localhost:3999/')
         }
-    );   
+    );
 });

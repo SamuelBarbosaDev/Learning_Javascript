@@ -17,7 +17,6 @@ class Login{
     }
 
     async login(){
-        console.log(this.body)
         this.valida();
         if(this.errors.length > 0) return;
         this.user = await LoginModel.findOne({ email: this.body.email });
