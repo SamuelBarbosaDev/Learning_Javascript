@@ -131,7 +131,7 @@ tr td {
     height: 5rem;
     width: 100%;
 }
-.alert{
+.alert, .delete{
     background-color: rgb(202, 142, 142);
     color: rgb(85, 0, 0);
 }
@@ -219,4 +219,19 @@ tr td {
 .contact > .form-field > label{
     font-weight: bold;
     font-size: 1.8rem;
+}
+
+.update, .delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    height: 3rem;
+    width: 2rem;
+    width: 100%;
+}
+
+.update{
+    background-color: rgb(142, 144, 202);
+    color: rgb(25, 0, 85);
 }

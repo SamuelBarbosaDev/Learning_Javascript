@@ -6,7 +6,11 @@
         <span class="subtitle">Faça o cadastro do contato abaixo.</span>
         <%- include('./includes/messages') %>
         <section class="contact-content">
-            <form action="/contact/create" method="post" class="contact">
+            <% if(contact._id){ %>
+                <form action="/contact/update/<%= contact._id %>" method="post" class="contact">
+            <% } else{ %>
+                <form action="/contact/create" method="post" class="contact">
+            <% } %>
                 <div class="form-field">
                     <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                     <label for="name">Nome:</label>

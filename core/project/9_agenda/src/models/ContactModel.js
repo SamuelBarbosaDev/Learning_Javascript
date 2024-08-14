@@ -24,6 +24,13 @@ class Contact{
         this.contact = await ContactModel.create(this.body);
     }
 
+    async update(id){
+        if(typeof id !== 'string') return;
+        this.valida();
+        if(this.errors.length > 0) return;
+        this.contact = await ContactModel.findByIdAndUpdate(id, this.body, {new: true})
+    }
+
     valida(){
         this.cleanUp();
         if(this.body.email && !validator.isEmail(this.body.email)){
@@ -50,9 +57,20 @@ class Contact{
         }
     }
 
-    async buscandoPorId(id){
+    static async buscandoPorId(id){
         if(typeof id !== 'string') return;
         const contact = await ContactModel.findById(id);
+        return contact;
+    }
+
+    static async buscaContatos(){
+        const contact = await ContactModel.find().sort({criadoEm: -1})
+        return contact;
+    }
+
+    static async delete(id){
+        if(typeof id !== 'string') return;
+        const contact = await ContactModel.findOneAndDelete({_id: id});
         return contact;
     }
 }

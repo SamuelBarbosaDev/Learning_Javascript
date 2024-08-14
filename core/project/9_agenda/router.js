@@ -6,7 +6,7 @@ const contactController = require('./src/controllers/contactController');
 const { loginRequired } = require('./src/middlewares/globalMiddleware')
 
 
-router.get('/', homeController.index);
+router.get('/', contactController.readAll);
 
 // Login & Registro
 router.get('/login/', loginController.index);
@@ -17,6 +17,8 @@ router.get('/login/logout', loginController.logout);
 // Contatos
 router.get('/contact', loginRequired, contactController.index);
 router.post('/contact/create', loginRequired, contactController.create);
-router.get('/contact/:id', loginRequired, contactController.update);
+router.get('/contact/:id', loginRequired, contactController.edit);
+router.post('/contact/update/:id', loginRequired, contactController.update);
+router.get('/delete/:id', loginRequired, contactController.delete)
 
 module.exports = router;

@@ -5,38 +5,30 @@
         <h1>Agenda</h1>
         <span class="subtitle">Seus contatos estão abaixo</span>
         <%- include('./includes/messages') %>
-        <table class="agenda-contacts">
-            <tr>
-                <th>Nome</th>
-                <th>Sobrenome</th>
-                <th>Telefone</th>
-                <th>E-mail</th>
-            </tr>
-            <tr>
-                <td>Nome</td>
-                <td>Sobrenome</td>
-                <td>+55 (99) 999999999</td>
-                <td>doquinhajunio@email.com</td>
-            </tr>
-            <tr>
-                <td>Nome</td>
-                <td>Sobrenome</td>
-                <td>+55 (99) 999999999</td>
-                <td>doquinhajunio@email.com</td>
-            </tr>
-            <tr>
-                <td>Nome</td>
-                <td>Sobrenome</td>
-                <td>+55 (99) 999999999</td>
-                <td>doquinhajunio@email.com</td>
-            </tr>
-            <tr>
-                <td>Nome</td>
-                <td>Sobrenome</td>
-                <td>+55 (99) 999999999</td>
-                <td>doquinhajunio@email.com</td>
-            </tr>
-        </table>
+        <% if(contact.length > 0){ %>
+            <table class="agenda-contacts">
+                <tr>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <% contact.forEach(contact => {%>
+                    <tr>
+                        <td><%= contact.name %></td>
+                        <td><%= contact.last_name %></td>
+                        <td><%= contact.phone %></td>
+                        <td><%= contact.email %></td>
+                        <td><a href="contact/<%= contact._id %>" class="update">Editar</a></td>
+                        <td><a href="delete/<%= contact._id %>" class="delete">Excluir</a></td>
+                    </tr>
+                <% }); %>
+            </table>
+        <% } else{ %>
+            <p style="margin-top: 3rem;">Você não tem nenhum contato cadastrado.</p>
+        <% } %>
     </section>
 </main>
 <%- include('./includes/footer') %>
