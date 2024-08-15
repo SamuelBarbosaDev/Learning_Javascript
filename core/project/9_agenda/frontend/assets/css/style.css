@@ -150,16 +150,16 @@ tr td {
     height: 100%;
 }
 
-.login, .sing-up, .form-field, .btn-form, .contact{
+.sing-in, .sing-up, .form-field, .btn-form, .contact{
     margin: var(--gap-small);
 }
 
-.login, .sing-up, .contact{
+.sing-in, .sing-up, .contact{
     min-width: 40rem;
     margin-top: var(--gap-default);
 }
 
-.login > h2, .sing-up > h2, .title-form{
+.sing-in > h2, .sing-up > h2, .title-form{
     font-size: 2rem;
 }
 
