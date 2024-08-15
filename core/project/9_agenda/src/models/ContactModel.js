@@ -38,7 +38,7 @@ class Contact{
         }
         if(!this.body.name) this.errors.push('É obrigatório o preenchimento do campo `Nome`.');
         if(!this.body.email && !this.body.phone){
-            this.body.errors.push('É obrigatório o preenchimento de ao menos um dos campos `Telefone` ou `E-mail`.')
+            this.errors.push('É obrigatório o preenchimento de ao menos um dos campos `Telefone` ou `E-mail`.')
         }
     }
 
