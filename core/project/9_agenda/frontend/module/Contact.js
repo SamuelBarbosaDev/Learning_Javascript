@@ -1,6 +1,4 @@
-import validator from 'validator'
-
-export default class Login{
+export default class Contact{
     constructor(form){
         this.form = document.getElementsByClassName(form)[0];
         this.erro = false;
@@ -13,41 +11,42 @@ export default class Login{
 
     validar(){
         this.form.addEventListener('submit', e => {
-            e.preventDefault()
+            e.preventDefault();
             this.erro = false;
+            const name = e.target.querySelector('input[name="name"]');
+            const phone = e.target.querySelector('input[name="phone"]');
             const email = e.target.querySelector('input[name="email"]');
-            const password = e.target.querySelector('input[name="password"]');
             const subtitle = document.getElementsByClassName('subtitle')[0];
-            document.querySelectorAll('.alert').forEach(e => e.remove())
+            document.querySelectorAll('.alert').forEach(e => e.remove());
 
-            if(password.value.length < 3 || password.value.length > 50){
+            if(!name.value){
                 subtitle.after(
-                    this.criaAlerta(
-                        'A Senha precisa ter entre 3 e 50 caracteres.',
+                    this.criaAlert(
+                        'É obrigatório o preenchimento do campo "<strong>Nome</strong>".',
                         'alert'
                     )
-                );
-                this.erro = true;
-            }
-            if(!validator.isEmail(email.value)){
-                subtitle.after(
-                    this.criaAlerta(
-                        'E-mail Inválido.',
-                        'alert'
-                    )
-                );
+                )
                 this.erro = true;
             }
 
+            if(!phone.value && !email.value){
+                subtitle.after(
+                    this.criaAlert(
+                        'É obrigatório o preenchimento de ao menos um dos campos "<strong>Telefone</strong>" ou "<strong>E-mail</strong>".',
+                        'alert'
+                    )
+                )
+                this.erro = true;
+            }
             if(this.erro) return;
             e.target.submit();
-        });
+        })
     }
 
-    criaAlerta(content, class_value){
+    criaAlert(content, className){
         const tagP = document.createElement('p');
-        tagP.className = class_value;
-        tagP.textContent = content;
+        tagP.className = className;
+        tagP.innerHTML += content;
         return tagP;
     }
 }
