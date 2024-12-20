@@ -58,6 +58,7 @@ Além deste repositório, aqui estão alguns recursos adicionais que podem ajuda
 - [Node](https://nodejs.org/pt/learn/getting-started/introduction-to-nodejs): Documentação do node.
 - [Ejs](https://ejs.co/): O EJS é uma linguagem de modelo simples que permite
  gerar marcação HTML com JavaScript simples.
+- [REGEX](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions): Expressões regulares são padrões utilizados para selecionar combinações de caracteres em uma string. Em JavaScript, expressões regulares também são objetos. Elas podem ser utilizadas com os métodos exec e test do objeto RegExp, e com os métodos match, replace,search, e split do objeto String. Este capítulo descreve o uso de expressões regulares em JavaScript.
 
 ## Licença
 
