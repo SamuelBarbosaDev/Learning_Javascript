@@ -4,6 +4,7 @@
 // | - ou
 
 const { text } = require("./database");
+
 const regex = /(Lorem)( ipsum)/i;
 const estudoTest = regex.test(text)
 const estudoExec = regex.exec(text)
